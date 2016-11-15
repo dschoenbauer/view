@@ -1,13 +1,20 @@
 {
     "name": "dschoenbauer/view",
+    "description": "A simple view layer",
+    "keywords": ["view"],
+    "homepage": "https://github.com/dschoenbauer/view",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "David Schoenbauer",
-            "email": "dschoenbauer@gmail.com"
+            "email": "dschoenbauer@gmail.com",
+            "role": "Developer"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=5.6.0"
+    },
     "autoload": {
         "psr-4": {
             "DSchoenbauer\\": "src/"
