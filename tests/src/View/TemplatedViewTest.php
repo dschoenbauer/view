@@ -14,6 +14,7 @@ class TemplatedViewTest extends PHPUnit_Framework_TestCase {
     private $_object;
 
     protected function setUp() {
+        chdir(dirname(__FILE__)); 
         $this->_object = new TemplatedView();
     }
 
@@ -22,7 +23,7 @@ class TemplatedViewTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testTemplateMethods() {
-        $file = "file/testTemplate.html";
+        $file = "../../file/testTemplate.html";
         $this->assertEquals($file, $this->_object->setTemplate($file)->getTemplate());
     }
 
@@ -35,12 +36,14 @@ class TemplatedViewTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testRenderNoData() {
-        $file = "file/testSimple.html";
+
+        $file = "../../file/testSimple.html";
         $this->assertEquals("<p>{content}</p>",$this->_object->setTemplate($file)->render());
     }    
     
     public function testRenderWithData() {
-        $file = "file/testSimple.html";
+
+        $file = "../../file/testSimple.html";
         $this->assertEquals("<p>test</p>",$this->_object->setTemplate($file)->render(['content'=>'test']));
     }    
 }
