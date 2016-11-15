@@ -31,7 +31,7 @@ class TemplatedView implements ViewInterface {
 
     public function setTemplate($template) {
         if(!file_exists($template)){
-            throw new FileNotFoundException($template);
+            throw new FileNotFoundException($template,"File not found: $template. Current working directory is:" . getcwd());
         }
         $this->_template = $template;
         return $this;
