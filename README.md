@@ -3,7 +3,9 @@
 View is a quick and dirty view generator, designed to reduce complexity and to seperate logical pices of the application.
 
 ## To Install:
+
 Add the follwoing to your composer.json
+
 ```
 {
     "repositories": [
@@ -19,11 +21,15 @@ Add the follwoing to your composer.json
 ```
 
 ## To Test:
+
 ### Windows:
+
 ```
 .\vendor\bin\phpunit.bat tests
 ```
+
 ### Linux:
+
 ```
 ./vendor/bin/phpunit tests
 ```
