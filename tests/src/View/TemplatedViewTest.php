@@ -17,6 +17,12 @@ class TemplatedViewTest extends PHPUnit_Framework_TestCase {
         chdir(dirname(__FILE__)); 
         $this->_object = new TemplatedView();
     }
+    
+    public function testTemplateLoadedWithTemplate(){
+        $file = "../../file/testTemplate.html";
+        $template = new TemplatedView($file);
+        $this->assertEquals($file, $template->getTemplate());
+    }
 
     public function testTemplatedViewHasViewInterface() {
         $this->assertInstanceOf(ViewInterface::class, $this->_object);
